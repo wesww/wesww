@@ -1,11 +1,15 @@
 language: node_js
+before_deploy: "echo 'hello'"
 deploy:
   provider: s3
   access_key_id: AKIAIMBLNRHUCFB3R3FQ
   secret_access_key:
     secure: XKD7yECgrDC7zuRfLLgQ/u0qyy1TDb4fiWJyF8XGa0qcwBI3z1URP8Rr8aHTmgJVMTZrW/jIYqiGQsaeKmiKYYAwMBC3PV6GAf0ZByevD0Ke1GSllRuOM661hXMUzOoNfXGmcGgZU9qKuL+lfriX3C8z12Q/M5UPwYvwsSuwCEpJVcfKn2/u2SR8RglET66nmjZbpFQ7yrn7PZMiJ8Vd75uzzPR657DVefFda5fhZet59YCmifrV4ZlYbiFNc9DdawjuYPkRuHv/EujY/sq1vByyYL+rXqzJk+nJSliuJpLECcs4HJgstmFOMq9vxqsnsjCmRWyjPJMMwzllzgTPRNEdCsX4wZjTQYeGoH3EdzSxHJBHvQw/h4Vh1wcf0JVEOKUbGjJdOUfPKjXvTzt9e0vvEYnhBWwyRGabf5eoRG5QjslSMtRL4rnIe6Dh9WxBaDu9XUdO/U21aq+uIkLH9wN9euO6PHfmTYLCwC9c8pk3/M9GWm1hmKXkTXgJVTKakpAnzUu/nZmDIFX512whOXFX8Bch1eYqworloVqVao1aZGQ8KTSqH44ZRFdkARcJ/dNTSEztkMRk6D4mCKhqsDd17l+ixXFMlqAhlSWrKQ+LyiqNb4yjpBaVsqPFDznpBReAsNCEiFp/E0kDM5XKA4cDxfmjO+m/Nxup6gEnHC8=
   bucket: wesww.com
+  skip_cleanup: true
+  region: us-west-1
   local-dir: dist
   acl: bucket_owner_full_control
   on:
     repo: wesww/wesww
+after_deploy: "echo 'world'"
