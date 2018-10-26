@@ -2,15 +2,17 @@ sudo: false
 language: node_js
 node_js:
   - 11
+
 script: npm run test
+
 deploy:
   provider: s3
   skip_cleanup: true
-  access_key_id: AKIAIMBLNRHUCFB3R3FQ
-  secret_access_key:
   bucket: wesww.com
   region: us-west-1
   local-dir: $TRAVIS_BUILD_DIR/dist
+  access_key_id: AKIAIMBLNRHUCFB3R3FQ
+  secret_access_key:
     secure: bt/Cn1pLubM/fFk2xIuxmdIMFY+qDl0HiJN0+RZVhf8jTxxZDsYvgk22I2QbOYaBXfQOtwlu/flfub7zPBvcmwbiZBGAySESK/v9zAz0rKVDCdJr+cjbC6pkyG1AOKmLvAD0WlSpS1PCs/D9AR2F5VkCe/NHFU5Gz37xXfu46ZRKHdM0aSK2P+qJTMuvgtR/87dqg8DUhXlYUyoMV2OlSR0XYIGC59ZPAZGQizi3UbX5/P7H++3qi9Xb18XrHOt7weJ6mLe2/0KiE2q+1lsuvK8J5ycqRqyWEsy864WljzmyJm0s55DQw86D4iFnUl1YVrkCL7mPqFlwBPTA44Bq/ZgN98UP/f6z2Bh3eU5UhmFExxhm7oWIUmke9DJ1IetJMzPTECXgdcOdjc/p6XGChyG9y1vocrUEoNb61eKucmRyoPU6qqjevUP+CFbtbB3udeAO1nCer+uC2QLSMT7gfPDaRnQPnAHS8B4fDel2hZKMO/ZLEzbfyk2ofq9tLxE0VkbOLG0Fwskwg9beKzmdpPr39wrgNKI2a0kC2pugJbn0b0JkGWnthz6bvmo30I5Me3nzgWJUj8VzUtjVHL8zBCUCrLBuEqKUhwjQu+/1GGYn5d48dANo6yi5z6EHryv68AacEsNkfbspdwg3ZShVZPLzrpvtrjgCbEpuimFr7o4=
   acl: public_read
   on:
