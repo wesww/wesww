@@ -1,0 +1,19 @@
+{
+  "name": "wesww",
+  "version": "0.0.0",
+  "description": "wesww",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Hello world\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesww/wesww.git"
+  },
+  "author": "wesww",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesww/wesww/issues"
+  },
+  "homepage": "https://wesww.com"
+}
